@@ -1,0 +1,20 @@
+.navigation {
+  padding: 0 0.5rem;
+
+}
+
+.navigation__group {
+  margin-bottom: 1rem;
+}
+
+.navigation__separator {
+  border-top: 1px solid #4B5563;
+  margin: 2rem 0;
+}
+
+
+.sidebar-nav__title {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
