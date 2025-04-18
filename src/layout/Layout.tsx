@@ -1,7 +1,7 @@
 import React, { memo }  from 'react';
 import { Menu } from 'lucide-react';
 import './Layout.css';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Sidebar from './Sidebar';
 
 interface LayoutProps {
   children: React.ReactNode;
