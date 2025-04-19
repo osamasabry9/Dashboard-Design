@@ -1,17 +1,17 @@
 {
-  "homepage": "https://osamasabry9.github.io/Dashboard-Design",
   "name": "dashboard",
+  "homepage": "https://osamasabry9.github.io/Dashboard-Design",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.494.0",
