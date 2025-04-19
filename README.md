@@ -1,54 +1,121 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Dashboard Project
 
-Currently, two official plugins are available:
+A React-based admin dashboard replicating the provided UI design with Header, Sidebar, Charts, Stat Cards, and more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Branches
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **master**  
+  Production‑ready code.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **develop**  
+  Main integration branch for ongoing work.
+
+- **feature/Dashboard**  
+  Implements the **Dashboard** page and its components (charts, stat cards, top‑selling products).
+
+- **feature/add-Header**  
+  Adds the **Header** layout and all related sub‑components (Breadcrumb, SearchInput, Notification button, UserProfile).
+
+- **feature/add-sidebar**  
+  Adds the **Sidebar** layout and navigation items.
+
+---
+
+## File Structure
+
+Below is the project’s `src/` directory tree (merged view from both screenshots):
+
+```
+src/
+├── assets/                    # Static assets (images, icons, fonts)
+│
+├── components/
+│   ├── dashboard/             # Dashboard page components
+│   │   ├── ChartSection/
+│   │   │   ├── ChannelsChart/
+│   │   │   ├── RevenueChart/
+│   │   │   ├── ChartSection.css
+│   │   │   └── index.tsx
+│   │   ├── SalesByAge/
+│   │   ├── SalesByCountry/
+│   │   ├── StatCards/
+│   │   │   ├── StatCard/
+│   │   │   ├── index.tsx
+│   │   │   ├── StatCards.css
+│   │   │   └── StatCards.test.tsx
+│   │   └── TopSellingProducts/
+│   │
+│   ├── Header/                # Header and its sub‑components
+│   │   ├── Breadcrumb/
+│   │   ├── CustomNotificationButton/
+│   │   ├── SearchInput/
+│   │   └── UserProfile/
+│   │
+│   └── sidebar/               # Sidebar and its sub‑components
+│       ├── Navigation/
+│       ├── NavItem/
+│       ├── SidebarHeader/
+│       └── UserProfile/
+│
+├── data/
+│   └── mockData.ts            # Mock data for development
+│
+├── layout/                    # Layout wrappers for Header/Sidebar
+│   ├── Header/
+│   │   ├── Header.css
+│   │   ├── Header.test.tsx
+│   │   └── index.tsx
+│   │
+│   └── sidebar/
+│       ├── index.tsx
+│       ├── sidebar.css
+│       ├── Sidebar.test.tsx
+│   ├── Layout.css
+│   └── Layout.tsx
+│
+├── pages/
+│   └── DashboardPage/
+│       ├── DashboardPage.css
+│       ├── DashboardPage.test.tsx
+│       └── DashboardPage.tsx
+│
+├── types/                     # TypeScript definitions
+│   ├── channelsData.type.ts
+│   ├── header.types.ts
+│   ├── index.ts
+│   ├── productsData.type.ts
+│   ├── salesCountry.type.ts
+│   └── sidebar‑types.ts
+│
+├── utils/                     # Helper functions (formatters, custom label renderer)
+│   ├── formatters.ts
+│   └── renderCustomizedLabel.tsx
+│
+├── App.tsx                    # Root component with routes/layout
+├── main.tsx                   # App entry point (Vite)
+├── index.css                  # Global styles
+├── vite-env.d.ts              # Vite TypeScript types
+└── vite.config.ts             # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. **Install dependencies**  
+   ```bash
+   npm install
+   ```
+2. **Run locally**  
+   ```bash
+   npm run dev
+   ```
+3. **Build for production**  
+   ```bash
+   npm run build
+   ```
+---
+
