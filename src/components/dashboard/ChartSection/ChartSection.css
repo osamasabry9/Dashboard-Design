@@ -1,0 +1,107 @@
+.chart-section-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .chart-section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.chart-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.chart-date-range {
+  display: flex;
+  align-items: center;
+}
+
+.date-range-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.chart-container {
+  height: 16rem;
+}
+
+.chart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.chart-summary {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.summary-value {
+  font-weight: 500;
+  color: #374151;
+}
+
+.view-report-button {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.view-report-button:hover {
+  color: #1d4ed8;
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-marker {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  margin-right: 0.25rem;
+}
+
+.revenue-marker {
+  background-color: #3b82f6;
+}
+
+.people-marker {
+  background-color: #9ca3af;
+}
+
+.legend-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}

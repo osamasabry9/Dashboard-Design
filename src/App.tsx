@@ -1,12 +1,10 @@
 import Layout from "./layout/Layout";
+import DashboardPage from "./pages/DashboardPage";
 
 function App() {
   return (
     <Layout>
-      <div className="App">
-        <h1>Welcome to the React App</h1>
-        <p>This is a simple React application.</p>
-      </div>
+      <DashboardPage />
     </Layout>
   )
 }
