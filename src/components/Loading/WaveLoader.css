@@ -1,0 +1,42 @@
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+}
+
+/* Wave Line */
+.wave-line {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.wave-line div {
+  width: 3px;
+  margin: 0 2px;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #3182ce, #63b3ed);
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.wave-line div:nth-child(1) { height: 20px; animation-delay: -1.2s; }
+.wave-line div:nth-child(2) { height: 26px; animation-delay: -1.1s; }
+.wave-line div:nth-child(3) { height: 32px; animation-delay: -1.0s; }
+.wave-line div:nth-child(4) { height: 38px; animation-delay: -0.9s; }
+.wave-line div:nth-child(5) { height: 32px; animation-delay: -0.8s; }
+.wave-line div:nth-child(6) { height: 26px; animation-delay: -0.7s; }
+.wave-line div:nth-child(7) { height: 20px; animation-delay: -0.6s; }
+.wave-line div:nth-child(8) { height: 14px; animation-delay: -0.5s; }
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
